@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink-color: rgb(241, 38, 89);
+}
+
+html {
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.player {
+    position: relative;
+    max-width: 480px;
+    margin: 0 auto;
+
+    .icon-pause {
+        display: none;
+    }
+
+    &.playing .icon-pause {
+        display: block;
+    }
+
+    &.playing .icon-play {
+        display: none;
+    }
+
+    .dashboard {
+        padding: 16px 16px 14px;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        max-width: 480px;
+        border-bottom: 1px solid #ebebeb;
+
+        header {
+            text-align: center;
+            margin-bottom: 10px;
+
+            h4 {
+                font-size: 1rem;
+                color: var(--pink-color);
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .cd {
+            display: flex;
+            margin: auto;
+            width: 200px;
+
+            .cd-thumb {
+                width: 100%;
+                padding-top: 100%;
+                border-radius: 50%;
+                background-color: #333;
+                background-size: cover;
+                margin: auto;
+            }
+        }
+
+        .control {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 18px 0 8px 0;
+
+            .btn {
+                font-size: 1.5rem;
+                color: #4c4c4c;
+                padding: 18px;
+            }
+
+            .active {
+                color: var(--pink-color);
+            }
+
+            .btn-toggle-play {
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--pink-color);
+                color: #fff;
+            }
+        }
+
+
+
+        .progress {
+            width: 100%;
+            -webkit-appearance: none;
+            height: 6px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: 0.2s;
+            transition: opacity 0.2s;
+        }
+
+        .progress::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 12px;
+            height: 6px;
+            background-color: var(--pink-color);
+            cursor: pointer;
+        }
+    }
+
+    .playlist {
+        margin-top: 420px;
+        padding: 12px;
+
+        .song {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            background-color: #fff;
+            padding: 8px 16px;
+            border-radius: 5px;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+
+
+            .thumb {
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                background-size: cover;
+                margin: 0 8px;
+            }
+
+
+            .body {
+                flex: 1;
+                padding: 0 16px;
+
+                h3 {
+                    font-weight: 900;
+                }
+
+                p {
+                    font-size: 12px;
+                    color: #9b9b9b;
+                }
+            }
+
+            .option {
+                padding: 16px 8px;
+                color: #999;
+                font-size: 18px;
+            }
+
+            .active {
+                background-color: var(--pink-color);
+            }
+
+            &:active {
+                opacity: 0.8;
+            }
+        }
+
+        .active {
+            background-color: var(--pink-color);
+
+            .body {
+                h3 {
+                    color: wheat;
+                }
+
+                p {
+                    color: #fff;
+                }
+            }
+
+            .option {
+                color: #fff;
+            }
+        }
+    }
+}

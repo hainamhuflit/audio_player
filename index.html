@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="player">
+        <div class="dashboard">
+            <header>
+                <h4>Now Playing</h4>
+                <h2>Serene</h2>
+            </header>
+
+            <div class="cd">
+                <div class="cd-thumb" style="background-image: url(./assets/img/player1.jpg);">
+                </div>
+            </div>
+
+            <div class="control">
+                <div class="btn btn-repeat">
+                    <i class="ri-repeat-line"></i>
+                </div>
+                <div class="btn btn-prev">
+                    <i class="ri-skip-back-fill"></i>
+                </div>
+                <div class="btn btn-toggle-play">
+                    <i class="ri-play-fill icon-play"></i>
+                    <i class="ri-pause-fill icon-pause"></i>
+                </div>
+                <div class="btn btn-next">
+                    <i class="ri-skip-forward-fill"></i>
+                </div>
+                <div class="btn btn-random">
+                    <i class="ri-shuffle-line"></i>
+                </div>
+            </div>
+
+            <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+
+            <audio id="audio" src=""></audio>
+        </div>
+
+        <div class="playlist">
+            
+        </div>
+    </div>
+
+
+
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
